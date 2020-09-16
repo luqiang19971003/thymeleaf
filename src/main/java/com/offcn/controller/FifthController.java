@@ -33,4 +33,10 @@ public class FifthController {
         return "index4";
     }
 
+    @GetMapping("/fifth")
+    public String indexPag() {
+
+
+        return "index4";
+    }
 }
