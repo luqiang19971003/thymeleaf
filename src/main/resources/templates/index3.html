@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--引入thymeleaf约束-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{title}"></title>
+</head>
+<body>
+    <!-- 把片段的内容插入到当前位置 -->
+    <div th:insert="~{font :: copy}">
+        <h1>
+            把片段的内容插入到当前位置
+        </h1>
+    </div>
+    <br/>
+
+    <!-- 使用片段的内容替换当前标签 -->
+    <div th:replace="~{font :: copy}">
+        <h1>
+            replace 使用片段的内容替换当前标签
+        </h1>
+    </div>
+    <br/>
+
+    <!-- 保留自己的主标签，不要片段的主标签 -->
+    <div th:include="~{font :: copy}"></div>
+    </body>
+</body>
+</html>

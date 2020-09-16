@@ -1,0 +1,6 @@
+spring:
+  thymeleaf:
+    cache: false #禁止模板缓存
+  messages: #设置文字信息
+    encoding: UTF-8
+    basename: message_zh_CN

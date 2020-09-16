@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--引入thymeleaf约束-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{title}"></title>
+</head>
+<body>
+    <!--给标签赋值 th:text-->
+    <h1 th:text="${userName}"></h1>
+
+    <!--给属性赋值 th:value、th:属性名称-->
+    <input type="text" name="name" th:value="${userName}">
+
+    <!--字符串拼接 1-->
+    <span th:text="'欢迎:'+${userName}+'登陆'"></span>
+    <!--字符串拼接 2-->
+    <span th:text="|欢迎:${userName}登陆|"></span>
+</body>
+</html>
